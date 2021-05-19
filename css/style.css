@@ -1,0 +1,116 @@
+/* Fonts */
+
+@font-face {
+    font-family: 'RobotoRegular';
+    src: url('../fonts/roboto-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* General Style */
+
+body {
+    margin: 0px auto;
+}
+
+.titlebox {
+	position: absolute;
+	bottom: 20px;
+	left: 0px;
+	padding-left: 30px;
+	padding-right: 20px;
+	color: #fff;
+	font-family: 'RobotoRegular'; 
+	text-align: center;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    text-align: left;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.video-skin {
+	position: relative;
+	margin-left: auto ;
+  	margin-right: auto ;
+	top: 1000px;
+	background-color: rgba(0,0,0,0.8);
+	width: 900px;
+	height: 70px;
+}
+
+.time-info {
+	width: 300px;
+	color: #fff;
+	font-family: 'RobotoRegular';
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+	font-size: 27px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 7px;
+}
+
+.progress {
+  height: 20px;  
+  position: relative;
+  width: 100%;
+  background-color: #777;
+  /* background-color: rgba(0,0,0,0.8); */
+}
+
+#progress-amount {
+  display: block;
+  height: 100%;
+  background-color: #595;
+  width: 0px;
+}
+
+
+#-----------------------------------------------------------
+			#video{
+            	position:absolute;
+            	 width: 80%;
+                height: 80%;
+            	top:0px;
+    			left:0px;
+                z-index:-1;/*顯示層級 video 為最低*/
+            }
+            div.video{display:flex; justify-content:center; align-items:center;vertical-align: bottom;}/*影片video 置中*/
+            .buttonbar{
+            	position:absolute;  /*顯示位置方式 absolute:絕對位置(重疊物件用) relative:相對位置 */  
+            	/* vertical-align: bottom;  垂直方向的對齊方式*/
+            	/*align:"center";水平置中 */
+            	/*valign:"center";水平置中 */
+            	width:800px;
+    			height: 60px;
+    			left:10%;/*位置靠左*/
+    			top:40%;/*位置高度*/
+            	z-index:1; /*顯示層級*/
+            	
+            }
+            /* 圓形按鈕 http://www.w3bai.com/zh-TW/css/css3_buttons.html */
+            button{
+            	width: 60px;
+    			height: 60px;
+    			display: inline;
+    			marage:0 30px 0 30px;/*上 右 下 左*/
+    			background:#336CFC;
+    			color:#ffffff;
+    			border-radius: 100%; /*使用border-radius屬性來圓角添加到一個按鈕*/
+            }
+            .range{
+	            width:90%;
+	            marage:30px 30px 30px 30px;/*上 右 下 左*/
+	            background-image: -webkit-linear-gradient(left, rgb(39, 69, 175) 0%, rgb(39, 69, 175) 18.7724%, rgba(255, 255, 255, 0.4) 18.7724%, rgba(255, 255, 255, 0.4) 100%);
+            }
+             .range:focus{
+              background:#336CFC;
+              transform:scale(1.1);/*物件放大*/
+              color:#222222;
+             }
+            
+            button:focus{
+			  background:#33FFFC;
+			  transform:scale(1.5);/*物件放大*/
+			  color:#222222;
+			}
+  

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- Ref:https://ithelp.ithome.com.tw/articles/10202195 -->
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, initial-scale=1.0, maximum-scale=1.0">
+  
+    <title>Tizen Web IDE - Tizen - DASH JS title </title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script language="JavaScript" type="text/javascript" src="js/keyTizen.js"></script>
+    <script language="JavaScript" type="text/javascript" src="js/main.js"></script>
+    
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/dashjs/2.9.1/dash.all.min.js"></script>
+		
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	
+</head>
+<body style="cursor: none;">
+		<div id="video" class="video">		
+			<div>
+				<video id="videoPlayer" >
+				</video>
+			</div>
+		</div>	
+        </div>
+		<div class="buttonbar" id="buttonbar">
+			<div class="contentTitlebar">
+				<div class="contentTitle" tabindex=-1 >TVBS新聞台</div>
+				<div class="contentSubTitle" tabindex=-1 >17整點新聞</div>
+			</div>
+		<!-- tabIndex 的最大值不应超过 32767。如果没有指定，它的默认值为 0。 -->
+			<div class="playaction" id="playaction">
+				<button id="backwardBtn" type="button"  onclick=""  tabindex=1 >
+					<img id="img_backward" style="width: 40px;height: 40px;" src="img/player/icon_backward.svg">
+				</button>
+				<button id="playBtn" type="button"  onclick="play()"  tabindex=2 autofocus >
+					<img id="img_play" style="width: 40px;height: 40px;" src="img/player/icon_play.svg">
+				</button>	
+				<button id="forwardBtn" type="button"  onclick=""  tabindex=3 >
+					<img id="img_forward" style="width: 40px;height: 40px;" src="img/player/icon_forward.svg">
+				</button>
+			</div>
+			<div class="linebar" id="linebar" >
+				<hr color=blue tabindex=-1>
+			</div>
+			<div class="progress-bar">
+			<!--type="range" ref: https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input/range -->
+				<input class="range" id="range" type="range" name="progress" class="player__progress" min="0" max="100" step="1" value="0"  tabindex=11 >
+
+				<div class="clipvideo">
+					<div class="clipvideo-pic"></div>
+					<div class="clipvideo-time"><span class="clip-hour" id="clipTime"></span></div>
+				</div>
+			</div>
+			<div class="playaction2" id="playaction2">
+				<button id="action1" type="button"  onclick=""  tabindex=21  >
+					節目
+				</button>
+				<button id="action2" type="button"  onclick=""  tabindex=22 >
+					章節
+				</button>	
+				<button id="action3" type="button"  onclick=""  tabindex=23 >
+					字幕
+				</button>
+				<button id="action4" type="button"  onclick=""  tabindex=24 >
+					字型
+				</button>
+				<button id="action4" type="button"  onclick=""  tabindex=25 >
+					語音
+				</button>
+			</div>
+	    </div>
+       
+        <div class="video-skin">
+			<div class="progress">
+		  		<span id="progress-amount"></span>
+			</div>
+			<div class="time-info">
+				<span id="current-time" style="color:white">00:00</span> <span style="color:white">/<span> <span id="total-time" style="color:white">00:00</span>
+			</div>	
+		</div> 
+       <script src="js/player.js"></script>
+    </body>
+</html>
